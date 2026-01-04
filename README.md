@@ -13,28 +13,10 @@ Detect phishing, malware, and scam links before you click. This browser extensio
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
-- **Python 3.7+**: Required for the backend server.
 - **Google Chrome** (or any Chromium-based browser).
-- **VirusTotal API Key**: Optional but recommended for real intelligence (otherwise uses mock logic).
 
 ### 2. Backend Setup
 The backend handles the actual scanning logic and communicates with Threat Intelligence APIs.
-
-1. Navigate to the `server` directory.
-2. Create a `.env` file and add your VirusTotal API key (optional):
-   ```env
-   VT_API_KEY=your_api_key_here
-   ```
-3. Run the backend:
-   - **Windows**: Double-click `run_backend.bat` in the root folder.
-   - **Manual**:
-     ```bash
-     cd server
-     python -m venv venv
-     source venv/bin/activate  # On Windows: venv\Scripts\activate
-     pip install -r requirements.txt
-     python app.py
-     ```
 
 ### 3. Extension Installation
 1. Open Chrome and go to `chrome://extensions/`.
