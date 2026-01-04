@@ -16,6 +16,11 @@ CORS(app)  # Enable CORS for Chrome Extension
 # 2. Get the API Key securely
 VT_API_KEY = os.getenv("VT_API_KEY")
 
+@app.route("/health")
+def health():
+    return {"status": "ok"}
+
+
 def unroll_url(url):
     """
     Follows redirects to find the final destination URL.
@@ -141,4 +146,4 @@ def scan_link():
     return jsonify(scan_result)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True)
